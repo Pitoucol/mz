@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           monbureaunumerique.fr
 @namespace      github.com/openstyles/stylus
-@version        1.0.3
+@version        1.0.4
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -225,8 +225,9 @@
     border: 1px solid transparent;
     padding: 1px 0;
     padding: .1rem 0;
-    background-color: #BCE0FE;
-    border-color: #BCE0FE color:black;
+    background-color: #67b1eb;
+    border-color: #67b1eb;
+    color:black;
     cursor: pointer;
 }
 
@@ -238,7 +239,7 @@
     border: 1px solid transparent;
     padding: 1px 0;
     padding: .1rem 0;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     border-color: #839cb1 #708698 #708698 #96b3cb;
     outline: none;
     color: black;
@@ -246,7 +247,7 @@
 }
 
 .DwtTreeItem-actioned {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     color: #333;
     height: 18px;
     height: 1.6rem;
@@ -259,7 +260,7 @@
 }
 
 .DwtTreeItem-dragOver {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     color: #333;
 }
 
@@ -670,7 +671,7 @@ TD.DwtListView-ColumnActive {
 
 UL.DwtListView-Rows {
     list-style: none;
-    padding: 0;
+   padding:0;
     margin: 0;
 }
 
@@ -1221,7 +1222,7 @@ UL.DwtListView-Rows {
     height: 1.35rem;
     width: 1.35rem;
     text-align: center;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
 }
 
 .ZmScheduleAssistantView .DwtCalendar .DwtCalendarDay-selected {
@@ -1905,7 +1906,7 @@ INPUT.xform_field {
 }
 
 .oselect_check_choice_selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
     padding: 4px;
 }
 
@@ -1977,7 +1978,7 @@ INPUT.xform_field {
 }
 
 .DwtGridSizePicker TABLE TR.grid TD.Hovered {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .DwtSpinner {
@@ -2716,7 +2717,7 @@ INPUT.xform_field {
 }
 
 .ZFocused .ZMenuItemBorder {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     border-color: #839cb1 #708698 #708698 #96b3cb;
     outline: none;
 }
@@ -8922,11 +8923,14 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 
 .Conv2Header {
     border-bottom: 1px solid #bfbfbf;
-   /*PEC*/background-color: #a2ccef;
+   /*PEC*/background-color: transparent;
     /*PEC*/height: 4em;
-    /*PEC*/padding-top: 1.5em;
+    /*PEC*/padding-top: 1.2em;
     overflow: hidden;
     position: relative;
+    /*PEC box-shadow:0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius:10px;*/
+    margin:0.5em 1em 0 1em;
 }
 
 .Conv2Header .expandIcon {
@@ -8935,7 +8939,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .Conv2Header .subject {
-    font-size: 1.36rem;
+    font-size: 2rem;
     font-weight: bold;
     white-space: nowrap;
     display: inline-block;
@@ -8943,8 +8947,8 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .Conv2Header .info {
-    background-color: #fff;
-    padding: .25em 5px .25em;
+    background-color: transparent;
+    padding: 1.5em 3em .25em;
     position: absolute;
     right: 0;
     top: 0;
@@ -9259,12 +9263,12 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 
 .addrBubble-selected,.addrBubbleHolder .addrBubble-selected {
     cursor: text;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
 }
 
 .addrBubble-actioned,.addrBubbleHolder .addrBubble-actioned {
     cursor: text;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
 }
 
 .addrBubble .ImgBubbleExpand,.addrBubble .ImgBubbleDelete {
@@ -9636,11 +9640,11 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .ZmContactSimpleView .SimpleContact-right,.ZmContactSimpleView .SimpleContact-drag {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
 }
 
 .ZmContactSimpleView .SimpleContact-drag {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
 }
 
@@ -9956,11 +9960,11 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .ZmContactCard-selected .contactHeader,.ZmContactCard-dnd .contactHeader,.ZmContactCard-selected-dnd .contactHeader {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .ZmContactCard-drag .contactHeader,.ZmContactCard-selected-right .contactHeader,.ZmContactCard-selected-drag .contactHeader {
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
 }
 
@@ -10127,7 +10131,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_time_selection {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .calendar_heading {
@@ -10162,7 +10166,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_heading_day-selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .calendar_heading_day_today {
@@ -10171,7 +10175,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_heading_day_today-selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
     color: #922d10;
     font-weight: bold;
 }
@@ -10358,7 +10362,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_month_cells_td-selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
     border: 1px solid #bfbfbf;
     white-space: nowrap;
     overflow: hidden;
@@ -10374,7 +10378,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_month_cells_td-selected .calendar_month_day_item_continues {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .calendar_month_day_table {
@@ -10419,7 +10423,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .calendar_month_day_item_row-selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .calendar_month_day_item_row-selected TD {
@@ -10446,7 +10450,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 .calendar_month_day_item-dnd {
     border-color: #839cb1 #708698 #708698 #96b3cb;
     outline: none;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
     white-space: nowrap;
     overflow: hidden;
@@ -11205,7 +11209,7 @@ HTML>BODY .appt-selected .appt_body,HTML>BODY .appt-selected .appt_30_body,HTML>
 }
 
 .acRow-selected {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
     background-image: none!important;
 }
 
@@ -11231,7 +11235,7 @@ HTML>BODY .appt-selected .appt_body,HTML>BODY .appt-selected .appt_30_body,HTML>
 
 .ZmPeopleSearch-toolbar {
     display: none;
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
     background-image: none!important;
     border: 1px solid #9fbed7;
     border-top: 0;
@@ -11287,7 +11291,7 @@ HTML>BODY .appt-selected .appt_body,HTML>BODY .appt-selected .appt_30_body,HTML>
 }
 
 .ZmAutocompleteListView .LinkText-hide-selected {
-    color: #BCE0FE!important;
+    color: #67b1eb!important;
 }
 
 .ZmFilterListView {
@@ -12578,7 +12582,7 @@ HTML>BODY .appt-selected .appt_body,HTML>BODY .appt-selected .appt_30_body,HTML>
 .ZmPanelHead {
     font-size: 1.36rem;
     font-weight: bold;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     padding: 5px;
     padding-left: 10px;
     font-weight: bold;
@@ -13699,7 +13703,7 @@ DIV .SuggestBtn {
 }
 
 .ZmLocationSuggestion.Row-selected {
-    border-color: #BCE0FE #8da8be #8da8be #BCE0FE;
+    border-color: #67b1eb #8da8be #8da8be #67b1eb;
 }
 
 DIV.ZmSuggestLink {
@@ -14658,27 +14662,27 @@ TD.vSpace {
 
 .notDroppable {
     border: 2px solid red!important;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
     opacity: .7;
 }
 
 .notDroppable-linux {
     border: 2px solid red!important;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
 }
 
 .droppable {
     border: 2px solid green!important;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
     opacity: .7;
 }
 
 .droppable-linux {
     border: 2px solid green!important;
-    background-color: #BCE0FE;
+    background-color: #67b1eb;
     box-shadow: 5px 5px 15px #999;
 }
 
@@ -14722,8 +14726,6 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
 }
 
 .RowDouble {
-    height: 20px;
-    height: 1.8rem;
     cursor: pointer;
     margin: 1px;
     padding-right: 3px;
@@ -14776,18 +14778,23 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
 .RowOdd {
     background-color: #fff;
 }
+    
+.RowOdd:hover {
+    background-color: #BCE0FE;
+}
+   
 
 .selected,.Row-selected,.Row-selected-dragProxy,.Row-selected-disabled {
-    background-color: #BCE0FE!important;
+   /*PEC*/ background-color: #e7f1fa!important;
     background-image: none!important;
 }
 
 .Row-selected .ZmListFlagsWrapper,.Row-selected-disabled .ZmListFlagsWrapper,.Row-selected .ZmMsgListDate,.Row-selected-disabled .ZmMsgListDate {
-    background: #BCE0FE!important;
+    background: #67b1eb!important;
 }
 
 .Row-selected-actioned .ZmListFlagsWrapper,.Row-selected-actioned .ZmMsgListDate {
-    background: #BCE0FE!important;
+    background: #67b1eb!important;
 }
 
 .Row-altSelected {
@@ -14814,15 +14821,15 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
 }
 
 .Row-selected-actioned {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .Row-dragProxy,.Row-matched-dragProxy {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .RowDouble-dragProxy .ZmListFlagsWrapper,.RowDouble-dragProxy .ZmMsgListDate,.Row-dragProxy .ZmListFlagsWrapper,.Row-dragProxy .ZmMsgListDate {
-    background-color: #BCE0FE!important;
+    background-color: #67b1eb!important;
 }
 
 .Row TD,.RowDouble TD,.Row DIV,.RowDouble DIV {
@@ -14872,7 +14879,7 @@ LI.RowDouble,LI.Row {
 .Unread {
     /* color: #cf2121; */
     font-weight: bold;
-    background-color: aliceblue;
+    background-color: #a0caed;
 }
 
 .Trash {
@@ -17013,6 +17020,7 @@ td INPUT[type="checkbox"]:not([id*="table_"]):not([id*="all"]),td>INPUT[type="ra
 
 .DwtListView {
     border-color: #d7dee2;
+
 }
 
 .DwtListView-Column {
@@ -17486,7 +17494,7 @@ div[id*="_PREF"].ZToolbar>table {
 }
 
 .SimpleContact.Row-selected .Tag .ImgBlank_16 {
-    background: #BCE0FE;
+    background: #67b1eb;
 }
 
 .ImgPerson_48 {
@@ -18261,7 +18269,7 @@ form#zLoginForm .form INPUT[type='text']:focus,form#zLoginForm .form INPUT[type=
 }
 
 .form INPUT[type='text']:focus,.form INPUT[type='password']:focus {
-    border: 1px solid #BCE0FE;
+    border: 1px solid #67b1eb;
 }
 
 .form SELECT {
