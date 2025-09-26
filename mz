@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           monbureaunumerique.fr
 @namespace      github.com/openstyles/stylus
-@version        1.0.5
+@version        1.0.6
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -8984,7 +8984,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .Conv2Messages .Last .date {
-    background-color: #d2eafe;
+    /*PEC*/ background-color: transparent;
     -webkit-transition: all 1000ms ease-out;
 }
 
@@ -8998,14 +8998,16 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
     border-style: solid;
     border-color: #999 #aaaaaa #aaa;
     background-color: #bfbfbf;
-    margin: 0 0 7px;
-    padding: 5px;
+    margin: 2em;
 }
 
 .Conv2Reply .ReplyTextarea {
-    width: 100%;
-    height: 100px;
+    /*PEC*/ max-width: 100%;
+   /*PEC*/ height: 150px;
     overflow: auto;
+    /*PEC*/padding:0.5em;
+   /*PEC*/ line-height:1.3;
+    /*PEC*/Border-radius:5px;
 }
 
 .Conv2Reply .ZToolbarTable>TBODY>TR>TD {
@@ -9051,7 +9053,6 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 
 .Conv2MsgHeader .readUnreadDot {
     position: absolute;
-    top: 0;
     padding: 0;
     left: 2px;
     top: 5px;
@@ -9110,12 +9111,13 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 }
 
 .Conv2MsgHeader .date {
-    background: none repeat scroll 0 0 white;
-    padding: 1px 7px .6em 5px;
+    /*PEC*/ background: none repeat scroll 0 0 transparent;
+    padding: 0.2em 0.2em;
     position: absolute;
     right: 0;
     top: 5px;
     white-space: nowrap;
+    
 }
 
 .Collapsed .Conv2MsgHeader .date {
@@ -9241,7 +9243,7 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 
 .addrBubble,.addrBubble-selected,.addrBubble-actioned,.attachmentBubble {
     border: 1px solid #999;
-    color: black;
+    color: #000;
     display: inline-block;
     line-height: 1.27rem;
     margin: 0 1px;
@@ -9263,12 +9265,12 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
 
 .addrBubble-selected,.addrBubbleHolder .addrBubble-selected {
     cursor: text;
-    background-color: #67b1eb;
+   /*PEC*/ background-color: #a2c2db;
 }
 
 .addrBubble-actioned,.addrBubbleHolder .addrBubble-actioned {
     cursor: text;
-    background-color: #67b1eb;
+  /*PEC*/  background-color: #a2c2db;
 }
 
 .addrBubble .ImgBubbleExpand,.addrBubble .ImgBubbleDelete {
@@ -9350,7 +9352,6 @@ INPUT[type="text"].search_input:focus,INPUT[type="text"].search_input-expanded:f
     color: black;
     background-color: #FFFFE0;
     border-color: #839cb1 #708698 #708698 #96b3cb;
-    outline: none;
     outline: none;
 }
 
@@ -14721,19 +14722,22 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
     height: 1.8rem;
     cursor: pointer;
     margin: 1px;
-    padding-right: 3px;
+    /*PEC*/ padding-right: 0px;
     -khtml-user-select: none;
 }
 
 .RowDouble {
     cursor: pointer;
     margin: 1px;
-    padding-right: 3px;
+    /*PEC*/ padding: 0px; 
     -khtml-user-select: none;
     height: 36px;
     height: 2.6rem;
     border-bottom-color: #CCC;
-    padding-top: 3px;
+}
+    
+    .RowDouble:hover { 
+    /*PEC*/ background-color: #BCE0FE;
 }
 
 .Row TABLE,.RowDouble TABLE {
@@ -14775,18 +14779,17 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
     background-color: #fff;
 }
 
-.RowOdd {
-    background-color: #fff;
+.RowOdd, .RowEven {
+    background-color: transparent;
 }
     
-.RowOdd:hover, .RowEven:hover {
-    background-color: #BCE0FE;
-}
    
 
 .selected,.Row-selected,.Row-selected-dragProxy,.Row-selected-disabled {
-   /*PEC*/ background-color: #e7f1fa!important;
+   /*PEC*/ background-color: #e4eff6!important;
     background-image: none!important;
+    /*PEC*/ border-radius: 5px;
+
 }
 
 .Row-selected .ZmListFlagsWrapper,.Row-selected-disabled .ZmListFlagsWrapper,.Row-selected .ZmMsgListDate,.Row-selected-disabled .ZmMsgListDate {
@@ -14850,6 +14853,7 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
 
 LI.RowDouble,LI.Row {
     list-style: none;
+    
 }
 
 .selected TD,.Row-selected TD,.Row-selected-dragProxy TD,.Row-selected-disabled TD {
@@ -14879,7 +14883,8 @@ LI.RowDouble,LI.Row {
 .Unread {
     /* color: #cf2121; */
     font-weight: bold;
-    background-color: #a0caed;
+    background-color: #8db7db;
+    /*PEC*/border-radius:5px;
 }
 
 .Trash {
@@ -16179,8 +16184,10 @@ SELECT {
 
 .RowDouble {
     height: auto;
-    padding-top: 0.5em;
+    /*PEC*/ padding: 0.3em 0;
     border-bottom: 1px solid lightgrey;
+    /*PEC*/ margin:0 1em;
+    
 }
 
 .RowDouble .TopRow,.RowDouble .ImgCheckboxChecked,.RowDouble .ImgCheckboxUnchecked {
@@ -17096,13 +17103,15 @@ td INPUT[type="checkbox"]:not([id*="table_"]):not([id*="all"]),td>INPUT[type="ra
 .addrBubble {
     padding: 0;
     border: var(--base-border-width) solid #8ea4af;
-    border-radius: 1rem;
+   /*PEC*/ border-radius: .5rem;
     display: inline-block;
     line-height: 1.1818;
-    margin-inline:.25rem;min-height: 1em;
-    background-color: transparent;
+    margin-inline:.25rem;
+    min-height: 1em;
+    /*PEC*/ background-color: transparent;
     color: #243238;
-    padding-inline:.5rem;}
+    padding-inline:.5rem;
+    }
 
 [id*="__COMPOSE-"].ZmAppToolBar {
     height: 3rem!important;
