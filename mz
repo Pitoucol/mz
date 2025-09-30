@@ -14736,10 +14736,14 @@ html[data-istwofactorsetuppage] .VeilOverlay TABLE {
     border-bottom-color: #CCC;
 }
     
-    .RowDouble:hover { 
+   .RowDouble:hover { 
     /*PEC*/ background-color: #BCE0FE;
 }
 
+    .Row:hover{ 
+    /*PEC*/ background-color: #BCE0FE;
+}
+    
 .Row TABLE,.RowDouble TABLE {
     table-layout: fixed;
 }
@@ -17721,7 +17725,7 @@ ZmEditContactView .DwtInputField textarea,.ZmEditContactViewAddress {
 
 .ZmPreferencesPage .DwtListView-Rows .Row,.DwtChooserListView .DwtListView-Rows .Row,.DwtListView .DwtListView-Rows .Row {
     height: auto;
-    padding: 0!important;
+    /*PEC*/ padding: 0.5em 0!important;
     margin: -1px;
 }
 
@@ -17754,7 +17758,7 @@ ZmEditContactView .DwtInputField textarea,.ZmEditContactViewAddress {
 }
 
 .ZmPreferencesPage .DwtListView-Rows td,.DwtChooserListView .DwtListView-Rows td,.DwtListView .DwtListView-Rows [class*="ZmMsgListCol"] {
-    border: 1px solid var(--table__td--border-color);
+    /*PEC*/border: 0px solid var(--table__td--border-color);
     padding: .75rem;
     overflow: hidden!important;
     text-overflow: ellipsis;
