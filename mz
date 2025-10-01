@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           monbureaunumerique.fr
 @namespace      github.com/openstyles/stylus
-@version        1.0.7
+@version        1.0.8
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -17725,12 +17725,12 @@ ZmEditContactView .DwtInputField textarea,.ZmEditContactViewAddress {
 
 .ZmPreferencesPage .DwtListView-Rows .Row,.DwtChooserListView .DwtListView-Rows .Row,.DwtListView .DwtListView-Rows .Row {
     height: auto;
-    /*PEC*/ padding: 0.5em 0!important;
-    margin: -1px;
+    /*PEC*/ padding:0!important;
+    /*PEC*/margin: 0.3em;
 }
 
 .DwtListView .DwtListView-Rows .Row {
-    border-bottom: 1px solid var(--table__td--border-color)!important;
+    /*PEC*/border-bottom: 0px solid var(--table__td--border-color)!important;
     margin-bottom: 0;
     margin-top: 0;
 }
