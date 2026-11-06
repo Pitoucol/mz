@@ -81,7 +81,14 @@ table.ZAppTabBorder{
 .ZTabBorder{
   border-radius:var(--radius) var(--radius) 0 0;
 }
-    
+  /* Onglets d'application : fond clair en permanence */
+table.ZAppTabBorder{
+  background-color:var(--c-tab-inactive);
+}
+.ZHover:not(.ZSelected) table.ZAppTabBorder,
+.ZFocused:not(.ZSelected) table.ZAppTabBorder{
+  background-color:var(--c-tab-hover);
+}  
     
     
 #skin_tr_main{
@@ -89,11 +96,107 @@ table.ZAppTabBorder{
 }
 
 #skin_spacing_top_row .skin_table>tbody>tr:first-child{
-  height:100px;   /* à ajuster */
+  height:60px;   /* à ajuster */
 } 
   #skin_spacing_app_row{
-  height:calc(2.4rem + 3px)!important;   /* à ajuster */
+  height:calc(2.4rem + 3px)!important;  /* à ajuster */
 }  
+    
+
+   .ZmMailMsgCapsuleView{
+  display:flex;
+  flex-direction:column;
+}
+.ZmMailMsgCapsuleView>.Conv2MsgHeader{
+  order:-2;
+}
+.ZmMailMsgCapsuleView>.footer{
+  order:-1;
+  padding:5px;
+  opacity:1;
+} 
+ .ZmMailMsgCapsuleView .footer .Link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+  height:2rem;
+  margin:0 2px;
+  padding:0 8px;
+  color:var(--c-text);
+  background-color:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius);
+  text-decoration:none!important;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.ZmMailMsgCapsuleView .footer .Link:hover{
+  background-color: var(--c-tab-hover);
+}
+.ZmMailMsgCapsuleView .footer .Link:active{
+  background-color: var(--c-tab-hover);
+}   
+    
+/* Agenda */
+    /* Rendez-vous : dégradé aplati + teinte pastel */
+.appt_body>table[style*="gradient"],
+.appt_30_body>table[style*="gradient"],
+.appt_allday_body>table[style*="gradient"]{
+  background-size:100% 1000%!important;
+  background-position:0 100%!important;
+  background-color:#9d9d9d!important;   /* plus clair = plus pastel */
+  background-blend-mode:screen!important;
+}
+    
+.appt_body,
+.appt_30_body,
+.appt_allday_body{
+  border-radius:5px;
+}
+    
+.appt-selected .appt_body,
+.appt-selected .appt_30_body,
+.appt-selected .appt_allday_body{
+  box-shadow:0 0 0 1px #666, 0 2px 4px rgba(0,0,0,.15);
+}
+.appt-selected .appt_body TABLE,
+.appt-selected .appt_30_body TABLE,
+.appt-selected .appt_allday_body TABLE{
+  border-color:transparent!important;
+}
+    
+/* Table interne : plus de bordure */
+.appt_body>table,
+.appt_30_body>table,
+.appt_allday_body>table{
+  border:0!important;
+}
+
+/* Bande d'origine neutralisée */
+.appt_body td[width="4"],
+.appt_30_body td[width="4"],
+.appt_allday_body td[width="4"]{
+  background:none!important;
+}
+
+/* Nouvelle bande */
+.appt_body::before,
+.appt_30_body::before,
+.appt_allday_body::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:4px;
+  background-color:rgba(0,0,0,.1);   /* plus grand = plus foncé */
+  pointer-events:none;
+}
+    
+    
+    
+    
     
     
 }
