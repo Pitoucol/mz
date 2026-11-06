@@ -7,3 +7,6 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https://messagerie.education.gouv.fr") {
+
+
+}
