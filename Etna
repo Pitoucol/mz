@@ -6,7 +6,7 @@
 @author         Me
 ==/UserStyle== */
 
-@-moz-document regexp("https://messagerie.education.gouv.fr") {
+@-moz-document domain("messagerie.education.gouv.fr") {
 /* === Cases à cocher : 16x16, coins arrondis === */
 
 p {
