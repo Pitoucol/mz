@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           etna
 @namespace      github.com/openstyles/stylus
-@version        1.0.10
+@version        1.0.11
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -9,11 +9,11 @@
 @-moz-document domain("messagerie.education.gouv.fr") {
 :root{
   /* Marque (skin ministère, html[data-skin-name=harmony]) */
-  --c-primary:#466964;        /* bandeau, bouton Nouveau */
+  --c-primary:#7a93ad/*#466964*/;        /* bandeau, bouton Nouveau */
   --c-primary-sel:#bdc9c7;    /* sélection */
   --c-primary-hover:#e4e9e8;  /* survol */
-  --c-tab-inactive:#6b8783;     /* --c-primary éclairci (~20 %) */
-  --c-tab-hover:#7a948f;
+  --c-tab-inactive:#5b738b;     /* --c-primary éclairci (~20 %) */
+  --c-tab-hover:#738da7;
     
   /* Secondaire / liens (addon + base) */
   --c-secondary:#005A95;
@@ -43,6 +43,59 @@
   --radius:5px;                 /* remplace --radius-checkbox : valeur globale */
 }
 
+ /* fond de header */
+html[data-skin-name=harmony] #skin_spacing_top_row{
+  background:var(--c-primary);   /* ou une valeur en dur */
+}
+/*fond nouveau message*/
+html[data-skin-name="harmony"] .ZNewButton .ZToolbarButtonBorder {
+  background-color: var(--c-tab-inactive) !important;
+  border-color: var(--c-tab-inactive);
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+/*Messages*/
+.Conv2MsgHeader{
+  background-color:var(--c-surface-alt);
+  border-radius:var(--radius) var(--radius) 0 0;
+}
+.Collapsed .Conv2MsgHeader{
+  border-radius:var(--radius);
+}
+.Conv2MsgHeader .date,
+.Conv2Messages .Last .date{
+  background:transparent;
+}
+
+/*Etiquettes*/    
+.RowDouble[style*="gradient"],
+.Row[style*="gradient"]{
+  background-size:100% 1000%!important;
+  background-position:0 100%!important;
+  background-color:#a0a0a0!important;
+  background-blend-mode:screen!important;
+}
+
+/* Date et zone icônes : plus de dégradé propre */
+.ZmMsgListDate[style*="gradient"],
+.ZmListFlagsWrapper[style*="gradient"]{
+  background:none!important;
+} 
+    
+    
+/* Dernier message */
+.Conv2Messages .Last{ background-color:var(--c-primary-hover); border-color:var(--c-border); }
+
+/*messages non lus*/
+    .ZmRowDoubleHeader.Unread:not([aria-selected="true"]){
+  box-shadow:inset 0 0 0 100vmax rgba(0,0,0,.06);   /* intensité */
+}
+
+/* Date et zone icônes : fond propre à neutraliser */
+.ZmRowDoubleHeader.Unread:not([aria-selected="true"]) .ZmMsgListDate,
+.ZmRowDoubleHeader.Unread:not([aria-selected="true"]) .ZmListFlagsWrapper{
+  background:transparent!important;
+}
+    
 /* Cases à cocher (sprites) : pilotées par la palette */
 .ImgCheckboxUnchecked,
 .ImgCheckboxChecked{
@@ -145,7 +198,7 @@ table.ZAppTabBorder{
 .appt_allday_body>table[style*="gradient"]{
   background-size:100% 1000%!important;
   background-position:0 100%!important;
-  background-color:#9d9d9d!important;   /* plus clair = plus pastel */
+  background-color:#bbb!important;   /* plus clair = plus pastel */
   background-blend-mode:screen!important;
 }
     
@@ -186,16 +239,55 @@ table.ZAppTabBorder{
 .appt_allday_body::before{
   content:"";
   position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
+  top:0; bottom:0; left:0;
   width:4px;
-  background-color:rgba(0,0,0,.1);   /* plus grand = plus foncé */
+  background:none;
+  backdrop-filter:saturate(6) brightness(.85);
   pointer-events:none;
 }
+  /* Dégradé du tr (créneaux 30 min) */
+.appt_body tr[style*="gradient"],
+.appt_30_body tr[style*="gradient"],
+.appt_allday_body tr[style*="gradient"]{
+  background:none!important;
+}
+
+/* Bande d'origine : sélecteur tolérant "4" / "4px" */
+.appt_body td[width^="4"],
+.appt_30_body td[width^="4"],
+.appt_allday_body td[width^="4"]{
+  background:none!important;
+}  
+
+/* Fond hors période (inline → !important) */
+.calendar_body>.ImgCalendarDayGrid{
+  background-color:#f2f2f2!important;   /* #fff pour supprimer */
+}
+
+/* Jour actif : en-tête */
+.calendar_heading_day_today,
+.calendar_heading_day_today-selected{
+  background-color:#bdc9c7!important;
+  color:#466964;
+  font-weight:bold;
+  border-radius:var(--radius) var(--radius) 0 0;
+}
     
-    
-    
+.calendar_cur_time_indicator_container{
+  overflow:visible!important;
+}
+.calendar_cur_time_indicator_container::before{
+  content:"";
+  position:absolute;
+  left:0; width:100%;
+  top:-3000px; height:3000px;          /* de 0h à l'heure courante */
+  background:rgba(70,105,100,.08);     /* --c-primary à 8 % */
+  pointer-events:none;
+}  
+    .calendar_cur_time_indicator_strip{
+  height:1px;      /* épaisseur du trait */
+  margin:0;
+}
     
     
     
