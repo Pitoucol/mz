@@ -9,6 +9,10 @@
 @-moz-document regexp("https://messagerie.education.gouv.fr") {
 /* === Cases à cocher : 16x16, coins arrondis === */
 
+p {
+color:red;
+}
+
 /* 1. Natives (Zimbra_basecss.css) */
 input[type="checkbox"]{
   -webkit-appearance:none!important;
