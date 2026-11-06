@@ -7,58 +7,65 @@
 ==/UserStyle== */
 
 @-moz-document domain("messagerie.education.gouv.fr") {
-/* === Cases à cocher : 16x16, coins arrondis === */
+:root{
+  /* Marque (skin ministère, html[data-skin-name=harmony]) */
+  --c-primary:#466964;        /* bandeau, bouton Nouveau */
+  --c-primary-sel:#bdc9c7;    /* sélection */
+  --c-primary-hover:#e4e9e8;  /* survol */
 
-p {
-color:red;
+  /* Secondaire / liens (addon + base) */
+  --c-secondary:#005A95;
+  --c-secondary-hover:#0088c1;
+
+  /* Accent Bootstrap (ministère) : cases cochées, .btn-primary */
+  --c-accent:#0d6efd;
+  --c-success:#198754;
+  --c-warning:#ffc107;
+  --c-danger:#dc3545;
+  --c-info:#0dcaf0;
+
+  /* Neutres (base) */
+  --c-text:#333;
+  --c-text-muted:#999;
+  --c-surface:#fff;
+  --c-surface-alt:#f2f2f2;
+  --c-border:#bfbfbf;
+  --c-border-strong:#7f7f7f;
+  --c-border-light:#e5e5e5;
+  --c-focus:#4c6573;
+
+  /* Marianne (ministère) */
+  --c-fr-blue:#000091;
+  --c-fr-red:#e1000f;
+
+  --radius-checkbox:5px;
 }
 
-/* 1. Natives (Zimbra_basecss.css) */
-input[type="checkbox"]{
-  -webkit-appearance:none!important;
-  -moz-appearance:none!important;
-  appearance:none!important;
-  width:16px!important;
-  height:16px!important;
-  min-width:16px;
+/* Cases à cocher (sprites) : pilotées par la palette */
+.ImgCheckboxUnchecked,
+.ImgCheckboxChecked{
   box-sizing:border-box;
-  margin:0 3px;
-  vertical-align:middle;
-  background:#fff center/contain no-repeat;
-  border:1px solid #888!important;
-  border-radius:5px!important;
-  cursor:pointer;
-}
-input[type="checkbox"]:checked{
-  background-color:#0d6efd;
-  border-color:#0d6efd!important;
-  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
-}
-input[type="checkbox"]:indeterminate{
-  background-color:#0d6efd;
-  border-color:#0d6efd!important;
-  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
-}
-input[type="checkbox"]:disabled{opacity:.5;}
-
-/* 2. Bootstrap (zimbra_skin_ministère.css) */
-.form-check-input[type=checkbox]{
-  width:16px;
-  height:16px;
-  margin-top:0;
-  border-radius:5px!important;
-}
-
-/* 3. Sprites (Zimbra_basecss.css) */
-.ImgCheckboxUnchecked{
-  background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3crect x='.5' y='.5' width='15' height='15' rx='5' fill='%23fff' stroke='%23888'/%3e%3c/svg%3e") center/16px 16px no-repeat!important;
   width:16px!important;
   height:16px!important;
+  margin-left:2px!important;
+  border:1px solid var(--c-border-strong);
+  border-radius:var(--radius-checkbox);
+  background-color:var(--c-surface)!important;
+  background-image:none!important;
 }
 .ImgCheckboxChecked{
-  background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3crect x='.5' y='.5' width='15' height='15' rx='5' fill='%230d6efd' stroke='%230d6efd'/%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 8 3 3 5-6'/%3e%3c/svg%3e") center/16px 16px no-repeat!important;
-  width:16px!important;
-  height:16px!important;
+  border-color:var(--c-accent);
+  background-color:var(--c-accent)!important;
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 8 3 3 5-6'/%3e%3c/svg%3e")!important;
+  background-position:center!important;
+  background-size:16px 16px!important;
+  background-repeat:no-repeat!important;
+}
+.ImgCheckboxUnchecked,
+.ImgCheckboxChecked{
+  margin-left:2px!important;
 }
 
+    
+    
 }
