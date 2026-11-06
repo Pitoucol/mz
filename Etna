@@ -7,6 +7,54 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https://messagerie.education.gouv.fr") {
+/* === Cases à cocher : 16x16, coins arrondis === */
 
+/* 1. Natives (Zimbra_basecss.css) */
+input[type="checkbox"]{
+  -webkit-appearance:none!important;
+  -moz-appearance:none!important;
+  appearance:none!important;
+  width:16px!important;
+  height:16px!important;
+  min-width:16px;
+  box-sizing:border-box;
+  margin:0 3px;
+  vertical-align:middle;
+  background:#fff center/contain no-repeat;
+  border:1px solid #888!important;
+  border-radius:5px!important;
+  cursor:pointer;
+}
+input[type="checkbox"]:checked{
+  background-color:#0d6efd;
+  border-color:#0d6efd!important;
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+input[type="checkbox"]:indeterminate{
+  background-color:#0d6efd;
+  border-color:#0d6efd!important;
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+input[type="checkbox"]:disabled{opacity:.5;}
+
+/* 2. Bootstrap (zimbra_skin_ministère.css) */
+.form-check-input[type=checkbox]{
+  width:16px;
+  height:16px;
+  margin-top:0;
+  border-radius:5px!important;
+}
+
+/* 3. Sprites (Zimbra_basecss.css) */
+.ImgCheckboxUnchecked{
+  background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3crect x='.5' y='.5' width='15' height='15' rx='5' fill='%23fff' stroke='%23888'/%3e%3c/svg%3e") center/16px 16px no-repeat!important;
+  width:16px!important;
+  height:16px!important;
+}
+.ImgCheckboxChecked{
+  background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3crect x='.5' y='.5' width='15' height='15' rx='5' fill='%230d6efd' stroke='%230d6efd'/%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 8 3 3 5-6'/%3e%3c/svg%3e") center/16px 16px no-repeat!important;
+  width:16px!important;
+  height:16px!important;
+}
 
 }
