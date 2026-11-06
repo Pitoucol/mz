@@ -43,15 +43,20 @@
   --radius:5px;                 /* remplace --radius-checkbox : valeur globale */
 }
 
- /* fond de header */
-html[data-skin-name=harmony] #skin_spacing_top_row{
-  background:var(--c-primary);   /* ou une valeur en dur */
-}
+
+
 /*fond nouveau message*/
 html[data-skin-name="harmony"] .ZNewButton .ZToolbarButtonBorder {
   background-color: var(--c-tab-inactive) !important;
   border-color: var(--c-tab-inactive);
   transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+ /* fond de header */
+html[data-skin-name=harmony] #skin_spacing_top_row{
+  background:var(--c-primary);   /* ou une valeur en dur */
+  background-image:url("https://pedagogie.ac-strasbourg.fr/fileadmin/pedagogie/dane/moodlecss/drane-strasbourg.png");
+  background-repeat:no-repeat;              /* repeat pour une tuile */
+  background-position: 66.67% bottom;               
 }
 /*Messages*/
 .Conv2MsgHeader{
