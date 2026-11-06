@@ -12,7 +12,9 @@
   --c-primary:#466964;        /* bandeau, bouton Nouveau */
   --c-primary-sel:#bdc9c7;    /* sélection */
   --c-primary-hover:#e4e9e8;  /* survol */
-
+  --c-tab-inactive:#6b8783;     /* --c-primary éclairci (~20 %) */
+  --c-tab-hover:#7a948f;
+    
   /* Secondaire / liens (addon + base) */
   --c-secondary:#005A95;
   --c-secondary-hover:#0088c1;
@@ -38,7 +40,7 @@
   --c-fr-blue:#000091;
   --c-fr-red:#e1000f;
 
-  --radius-checkbox:5px;
+  --radius:5px;                 /* remplace --radius-checkbox : valeur globale */
 }
 
 /* Cases à cocher (sprites) : pilotées par la palette */
@@ -49,7 +51,7 @@
   height:16px!important;
   margin-left:2px!important;
   border:1px solid var(--c-border-strong);
-  border-radius:var(--radius-checkbox);
+  border-radius:var(--radius);
   background-color:var(--c-surface)!important;
   background-image:none!important;
 }
@@ -61,11 +63,37 @@
   background-size:16px 16px!important;
   background-repeat:no-repeat!important;
 }
-.ImgCheckboxUnchecked,
-.ImgCheckboxChecked{
-  margin-left:2px!important;
+
+/* Onglets : ne plus rogner le haut de l'arrondi */
+.ZmAppChooser,
+#ztb_appChooser,
+#skin_container_app_chooser{
+  overflow:visible!important;
 }
 
+/* Onglets d'application */
+table.ZAppTabBorder{
+  border-radius:var(--radius) var(--radius) 0 0;
+}
+
+/* Onglets de formulaire (préférences, dialogues) */
+.ZTab,
+.ZTabBorder{
+  border-radius:var(--radius) var(--radius) 0 0;
+}
+    
+    
+    
+#skin_tr_main{
+  padding-top:8px!important;
+}
+
+#skin_spacing_top_row .skin_table>tbody>tr:first-child{
+  height:100px;   /* à ajuster */
+} 
+  #skin_spacing_app_row{
+  height:calc(2.4rem + 3px)!important;   /* à ajuster */
+}  
     
     
 }
