@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           etna
 @namespace      github.com/openstyles/stylus
-@version        1.0.11
+@version        1.0.12
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -54,7 +54,7 @@ html[data-skin-name="harmony"] .ZNewButton .ZToolbarButtonBorder {
  /* fond de header */
 html[data-skin-name=harmony] #skin_spacing_top_row{
   background:var(--c-primary);   /* ou une valeur en dur */
-  background-image:url("https://pedagogie.ac-strasbourg.fr/fileadmin/pedagogie/dane/moodlecss/drane-strasbourg.png");
+  background-image:url("https://pedagogie.ac-strasbourg.fr/fileadmin/pedagogie/dane/moodlecss/drane_ge.png");
   background-repeat:no-repeat;              /* repeat pour une tuile */
   background-position: 66.67% bottom;               
 }
