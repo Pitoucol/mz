@@ -169,7 +169,6 @@ table.ZAppTabBorder{
   order:-2;
 }
 .ZmMailMsgCapsuleView>.footer{
-  order:-1;
   padding:5px;
   opacity:1;
 } 
